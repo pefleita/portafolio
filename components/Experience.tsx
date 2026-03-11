@@ -103,6 +103,7 @@ function TimelineItem({
       {/* Content */}
       <div style={{ paddingBottom: isLast ? 0 : "2.5rem" }}>
         <div
+          className="timeline-header"
           style={{
             display: "flex",
             justifyContent: "space-between",
@@ -129,6 +130,7 @@ function TimelineItem({
               fontSize: "0.7rem",
               color: item.accent,
               letterSpacing: "0.05em",
+              whiteSpace: "nowrap",
             }}
           >
             {item.period}
@@ -217,6 +219,7 @@ export default function Experience() {
         </h2>
 
         <div
+          className="experience-grid"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
@@ -317,6 +320,22 @@ export default function Experience() {
             ))}
           </div>
         </div>
+
+        {/* CV download CTA */}
+        <style>{`
+          @media (max-width: 900px) {
+            .experience-grid {
+              grid-template-columns: 1fr !important;
+              gap: 3rem !important;
+            }
+          }
+          @media (max-width: 480px) {
+            .timeline-header {
+              flex-direction: column !important;
+              gap: 0.25rem !important;
+            }
+          }
+        `}</style>
 
         {/* CV download CTA */}
         <div
