@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "skills": "Stack",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "downloadCV": "Descargar CV",
+    "cv": "CV"
+  },
+  "hero": {
+    "available": "Disponible para proyectos",
+    "greeting": "Hola, soy",
+    "roles": {
+      "wordpress": "WordPress Developer",
+      "php": "PHP Developer",
+      "fullstack": "Full Stack Dev",
+      "nextjs": "Next.js Builder"
+    },
+    "description": "Desarrollo sitios web a medida con WordPress, PHP y tecnologías modernas. Transformo ideas en experiencias digitales rápidas, accesibles y orientadas a resultados.",
+    "viewProjects": "Ver proyectos",
+    "letsTalk": "Hablemos",
+    "downloadCV": "Descargar CV",
+    "years": "Años de experiencia",
+    "projects": "Proyectos entregados",
+    "clients": "Clientes satisfechos",
+    "scroll": "scroll"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "description": "Soy desarrollador web con más de 10 años de experiencia creando soluciones digitales personalizadas. Especializado en WordPress y PHP, combino habilidades técnicas con visión de UX para construir sitios que no solo funcionan, sino que convierten.",
+    "passion": "Me apasiona transformar ideas complejas en interfaces simples y efectivas. Creo que un buen desarrollo web debe ser invisible: rápido, accesible y orientado a resultados.",
+    "github": "Ver GitHub"
+  },
+  "skills": {
+    "title": "Stack técnico",
+    "subtitle": "Herramientas y tecnologías con las que trabajo diariamente",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "cms": "CMS & E-commerce",
+    "tools": "Herramientas"
+  },
+  "projects": {
+    "title": "Proyectos destacados",
+    "selectedWork": "Trabajo seleccionado",
+    "subtitle": "Una muestra de proyectos reales que demuestran mi expertise en WordPress, PHP y desarrollo web moderno.",
+    "viewMore": "Ver más detalles",
+    "hide": "Ocultar",
+    "problem": "PROBLEMA",
+    "role": "MI ROL",
+    "viewLive": "Ver sitio en vivo",
+    "noImage": "Imagen no disponible",
+    "items": {
+      "tislem": {
+        "title": "Tislem Perfumes",
+        "category": "WooCommerce",
+        "description": "Tienda e-commerce completa para una empresa de perfumería local con catálogo de +200 productos, pasarela de pago y panel de administración avanzado.",
+        "problem": "El cliente operaba con un sistema de ventas manual. Se necesitaba una solución digital que automatizara pedidos, inventario y facturación.",
+        "role": "Desarrollo completo: integración de pasarela de pago (Transfermovil), sistema de notificaciones por email y optimización de rendimiento."
+      },
+      "btech": {
+        "title": "BTech",
+        "category": "WordPress Corporativo",
+        "description": "Sitio web corporativo para empresa de asesoría e implantación tecnológica con blog integrado y formularios de captación de leads.",
+        "problem": "La empresa carecía de presencia digital profesional. Su sitio anterior era lento y no convertía visitantes en clientes potenciales.",
+        "role": "Diseño UI/UX, desarrollo de tema hijo avanzado, optimización Core Web Vitals y estrategia SEO técnico."
+      },
+      "tiempo21": {
+        "title": "Tiempo21",
+        "category": "WordPress + PHP Custom",
+        "description": "Portal web de noticias de la Emisora local de la provincia de Las Tunas, Cuba.",
+        "problem": "La web anterior estaba funcionando con un sistema estático obsoleto y lento.",
+        "role": "Diseño UI/UX, desarrollo de tema personalizado, optimización Core Web Vitals y estrategia SEO."
+      }
+    }
+  },
+  "experience": {
+    "title": "Trayectoria",
+    "subtitle": "Mi camino profesional como desarrollador web",
+    "present": "Actualidad",
+    "education": "Formación",
+    "workExperience": "Experiencia Laboral",
+    "viewCV": "¿Quieres ver mi CV completo?",
+    "viewCVDesc": "Descarga mi currículum actualizado en PDF con todos los detalles.",
+    "work": {
+      "radioVictoria": {
+        "title": "Desarrollador WordPress",
+        "description": "Desarrollo y mantenimiento de la web www.tiempo21.cu. Especialización en rendimiento, SEO técnico y soluciones a medida."
+      },
+      "btech": {
+        "title": "Desarrollador WordPress Freelance",
+        "description": "Rediseño y Desarrollo de web corporativa usando Wordpress, reduciendo el tiempo de carga en un 60% y estrategia SEO integral."
+      },
+      "prodevsolutions": {
+        "title": "Desarrollador WordPress Freelance",
+        "description": "Desarrollo de más de 9 sitios web personalizados para clientes de diversos sectores (e-commerce, servicios profesionales, blogs)."
+      }
+    },
+    "educationItems": {
+      "uci": {
+        "title": "Grado en Ingeniería en Ciencias Informáticas",
+        "description": "Especialización en desarrollo de software y sistemas web."
+      },
+      "seo": {
+        "title": "SEO Técnico para Desarrolladores",
+        "description": "Formación especializada en SEO técnico orientada a desarrolladores: Core Web Vitals, structured data, rendimiento y rastreo."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Estoy disponible para proyectos freelance, colaboraciones y consultoría. Si tienes una idea o necesitas mejorar tu presencia digital, escríbeme.",
+    "form": {
+      "title": "Envíame un mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre completo",
+      "email": "Email",
+      "emailPlaceholder": "tu@email.com",
+      "projectType": "Tipo de proyecto",
+      "projectTypePlaceholder": "Selecciona una opción...",
+      "projectTypes": {
+        "wordpress": "Sitio WordPress",
+        "woocommerce": "Tienda WooCommerce",
+        "plugin": "Plugin o tema a medida",
+        "nextjs": "Aplicación Next.js",
+        "maintenance": "Mantenimiento / SEO",
+        "other": "Otro"
+      },
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+      "send": "Enviar por WhatsApp",
+      "sending": "Enviando..."
+    },
+    "success": {
+      "title": "¡Mensaje enviado!",
+      "description": "Gracias por contactarme. Te responderé en menos de 24 horas.",
+      "sendAnother": "Enviar otro mensaje"
+    },
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "madeWith": "Hecho con",
+    "copyright": "© Todos los derechos reservados"
+  }
+}

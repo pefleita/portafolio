@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Stack",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "downloadCV": "Download CV",
+    "cv": "CV"
+  },
+  "hero": {
+    "available": "Available for projects",
+    "greeting": "Hi, I'm",
+    "roles": {
+      "wordpress": "WordPress Developer",
+      "php": "PHP Developer",
+      "fullstack": "Full Stack Dev",
+      "nextjs": "Next.js Builder"
+    },
+    "description": "I develop custom websites with WordPress, PHP and modern technologies. I transform ideas into fast, accessible, results-driven digital experiences.",
+    "viewProjects": "View projects",
+    "letsTalk": "Let's talk",
+    "downloadCV": "Download CV",
+    "years": "Years of experience",
+    "projects": "Projects delivered",
+    "clients": "Satisfied clients",
+    "scroll": "scroll"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I'm a web developer with over 10 years of experience creating customized digital solutions. Specialized in WordPress and PHP, I combine technical skills with UX vision to build sites that not only work, but convert.",
+    "passion": "I'm passionate about transforming complex ideas into simple, effective interfaces. I believe good web development should be invisible: fast, accessible and results-driven.",
+    "github": "View GitHub"
+  },
+  "skills": {
+    "title": "Technical stack",
+    "subtitle": "Tools and technologies I work with daily",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "cms": "CMS & E-commerce",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Featured projects",
+    "selectedWork": "Selected work",
+    "subtitle": "A showcase of real projects demonstrating my expertise in WordPress, PHP and modern web development.",
+    "viewMore": "View more details",
+    "hide": "Hide",
+    "problem": "PROBLEM",
+    "role": "MY ROLE",
+    "viewLive": "View live site",
+    "noImage": "Image not available",
+    "items": {
+      "tislem": {
+        "title": "Tislem Perfumes",
+        "category": "WooCommerce",
+        "description": "Complete e-commerce store for a local perfume company with a catalog of +200 products, payment gateway and advanced admin panel.",
+        "problem": "The client was operating with a manual sales system. A digital solution was needed to automate orders, inventory and invoicing.",
+        "role": "Complete development: payment gateway integration (Transfermovil), email notification system and performance optimization."
+      },
+      "btech": {
+        "title": "BTech",
+        "category": "Corporate WordPress",
+        "description": "Corporate website for a technology consulting and implementation company with integrated blog and lead capture forms.",
+        "problem": "The company lacked a professional digital presence. Their previous website was slow and didn't convert visitors into leads.",
+        "role": "UI/UX design, advanced child theme development, Core Web Vitals optimization and technical SEO strategy."
+      },
+      "tiempo21": {
+        "title": "Tiempo21",
+        "category": "WordPress + Custom PHP",
+        "description": "News web portal for the local radio station of Las Tunas province, Cuba.",
+        "problem": "The previous website was running on an obsolete, slow static system.",
+        "role": "UI/UX design, custom theme development, Core Web Vitals optimization and SEO strategy."
+      }
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey as a web developer",
+    "present": "Present",
+    "education": "Education",
+    "workExperience": "Work Experience",
+    "viewCV": "Want to see my full CV?",
+    "viewCVDesc": "Download my updated resume in PDF with all the details.",
+    "work": {
+      "radioVictoria": {
+        "title": "WordPress Developer",
+        "description": "Development and maintenance of www.tiempo21.cu. Specialization in performance, technical SEO and custom solutions."
+      },
+      "btech": {
+        "title": "Freelance WordPress Developer",
+        "description": "Redesign and development of corporate website using WordPress, reducing load time by 60% and comprehensive SEO strategy."
+      },
+      "prodevsolutions": {
+        "title": "Freelance WordPress Developer",
+        "description": "Development of more than 9 customized websites for clients from various sectors (e-commerce, professional services, blogs)."
+      }
+    },
+    "educationItems": {
+      "uci": {
+        "title": "Degree in Computer Science Engineering",
+        "description": "Specialization in software and web systems development."
+      },
+      "seo": {
+        "title": "Technical SEO for Developers",
+        "description": "Specialized training in technical SEO for developers: Core Web Vitals, structured data, performance and crawling."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "I'm available for freelance projects, collaborations and consulting. If you have an idea or need to improve your digital presence, write to me.",
+    "form": {
+      "title": "Send me a message",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "projectType": "Project type",
+      "projectTypePlaceholder": "Select an option...",
+      "projectTypes": {
+        "wordpress": "WordPress Website",
+        "woocommerce": "WooCommerce Store",
+        "plugin": "Custom Plugin or Theme",
+        "nextjs": "Next.js Application",
+        "maintenance": "Maintenance / SEO",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send via WhatsApp",
+      "sending": "Sending..."
+    },
+    "success": {
+      "title": "Message sent!",
+      "description": "Thank you for contacting me. I'll respond within 24 hours.",
+      "sendAnother": "Send another message"
+    },
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "copyright": "© All rights reserved"
+  }
+}
