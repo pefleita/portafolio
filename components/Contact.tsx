@@ -61,9 +61,9 @@ export default function Contact() {
               marginBottom: "1.25rem",
             }}
           >
-            {t("contact.title").includes("Contact") ? "Let's talk about your" : "Hablemos de tu"}{" "}
+            {t("contact.letstalk")}{" "}
             <span className="gradient-text">
-              {t("contact.title").includes("Contact") ? "next project" : "próximo proyecto"}
+              {t("contact.nextproject")}
             </span>
           </h2>
 

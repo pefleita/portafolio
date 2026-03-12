@@ -109,6 +109,8 @@
   },
   "contact": {
     "title": "Contact",
+    "letstalk": "Let's talk about your",
+    "nextproject": "next project",
     "subtitle": "I'm available for freelance projects, collaborations and consulting. If you have an idea or need to improve your digital presence, write to me.",
     "form": {
       "title": "Send me a message",
