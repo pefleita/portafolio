@@ -21,6 +21,9 @@ export const metadata: Metadata = {
       "Professional web development with WordPress, PHP and modern technologies.",
     type: "website",
   },
+  verification:{
+    google: "IxdyO4MRb8pR4oLt0lHGtPYr1Gs0RrJ14Uld2EDiUwI"
+  },
 };
 
 export default function RootLayout({
