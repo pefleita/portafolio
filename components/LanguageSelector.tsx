@@ -5,48 +5,24 @@ export default function LanguageSelector() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "0.25rem",
-        background: "var(--surface)",
-        border: "1px solid var(--border)",
-        borderRadius: "8px",
-        padding: "0.25rem",
-      }}
-    >
+    <div className="flex items-center gap-1 bg-surface border border-border rounded-lg p-1">
       <button
         onClick={() => setLanguage("es")}
-        style={{
-          background: language === "es" ? "var(--accent)" : "transparent",
-          color: language === "es" ? "white" : "var(--text-muted)",
-          border: "none",
-          borderRadius: "6px",
-          padding: "0.35rem 0.65rem",
-          fontFamily: "var(--font-mono)",
-          fontSize: "0.7rem",
-          fontWeight: 500,
-          cursor: "pointer",
-          transition: "all 0.2s",
-        }}
+        className={`px-2.5 py-1.5 font-mono text-xs font-medium rounded-md cursor-pointer transition-all ${
+          language === "es"
+            ? "bg-accent text-white"
+            : "bg-transparent text-text-muted hover:text-text"
+        }`}
       >
         ES
       </button>
       <button
         onClick={() => setLanguage("en")}
-        style={{
-          background: language === "en" ? "var(--accent)" : "transparent",
-          color: language === "en" ? "white" : "var(--text-muted)",
-          border: "none",
-          borderRadius: "6px",
-          padding: "0.35rem 0.65rem",
-          fontFamily: "var(--font-mono)",
-          fontSize: "0.7rem",
-          fontWeight: 500,
-          cursor: "pointer",
-          transition: "all 0.2s",
-        }}
+        className={`px-2.5 py-1.5 font-mono text-xs font-medium rounded-md cursor-pointer transition-all ${
+          language === "en"
+            ? "bg-accent text-white"
+            : "bg-transparent text-text-muted hover:text-text"
+        }`}
       >
         EN
       </button>

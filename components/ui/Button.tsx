@@ -8,41 +8,22 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export default function Button({
   variant = "primary",
   children,
-  style,
+  className = "",
   ...props
 }: ButtonProps) {
-  const baseStyle = {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "0.5rem",
-    padding: "0.85rem 2rem",
-    fontFamily: "var(--font-display)",
-    fontWeight: 600,
-    fontSize: "0.9rem",
-    letterSpacing: "0.05em",
-    borderRadius: "8px",
-    cursor: "pointer",
-    transition: "all 0.25s",
-    textDecoration: "none",
-  };
+  const baseClasses =
+    "inline-flex items-center justify-center gap-2 font-display font-semibold text-sm tracking-wider rounded-lg cursor-pointer transition-all duration-300 no-underline";
 
   const variants = {
-    primary: {
-      background: "var(--accent)",
-      color: "white",
-      border: "none",
-    },
-    outline: {
-      background: "transparent",
-      color: "var(--text)",
-      border: "1px solid var(--border-light)",
-    },
+    primary:
+      "bg-accent text-white border-none hover:bg-[#7c73ff] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_var(--color-accent-glow)]",
+    outline:
+      "bg-transparent text-text border border-border-light hover:border-accent hover:text-accent hover:-translate-y-0.5",
   };
 
   return (
     <button
-      style={{ ...baseStyle, ...variants[variant], ...style }}
+      className={`${baseClasses} ${variants[variant]} ${className}`}
       {...props}
     >
       {children}

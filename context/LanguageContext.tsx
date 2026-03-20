@@ -34,20 +34,20 @@ function getNestedValue(obj: Record<string, unknown>, path: string): string {
   return typeof value === "string" ? value : path;
 }
 
-function getInitialLanguage(): Language {
-  if (typeof window === "undefined") return "es";
-  
-  const stored = localStorage.getItem("language") as Language;
-  if (stored && (stored === "es" || stored === "en")) {
-    return stored;
-  }
-  
-  const browserLang = navigator.language.split("-")[0];
-  return browserLang === "en" ? "en" : "es";
+function getStoredLanguage(): Language {
+  try {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("language") as Language | null;
+      if (stored === "es" || stored === "en") return stored;
+      const browserLang = navigator.language.split("-")[0];
+      return browserLang === "en" ? "en" : "es";
+    }
+  } catch {}
+  return "es";
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(getInitialLanguage);
+  const [language, setLanguageState] = useState<Language>(getStoredLanguage);
 
   useEffect(() => {
     localStorage.setItem("language", language);

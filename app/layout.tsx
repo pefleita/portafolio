@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { HydrationFix } from "@/components/HydrationFix";
 
 export const metadata: Metadata = {
   title: "Pedro Fleita — WordPress Developer & Full Stack",
@@ -26,19 +27,27 @@ export const metadata: Metadata = {
   },
 };
 
+function ClientLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <HydrationFix>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      {children}
+    </HydrationFix>
+  );
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className="scroll-smooth">
-      <body>
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <LanguageProvider>
-          <a href="#main-content" className="skip-link">
-            Skip to main content
-          </a>
-          {children}
+          <ClientLayout>{children}</ClientLayout>
         </LanguageProvider>
       </body>
     </html>

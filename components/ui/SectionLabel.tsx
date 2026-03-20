@@ -6,10 +6,7 @@ interface SectionLabelProps {
 
 export default function SectionLabel({ children }: SectionLabelProps) {
   return (
-    <div
-      className="section-label"
-      style={{ marginBottom: "1rem" }}
-    >
+    <div className="section-label mb-4">
       {children}
     </div>
   );

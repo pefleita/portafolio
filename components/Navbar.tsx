@@ -4,6 +4,8 @@ import Link from "next/link";
 import NavLink from "./ui/NavLink";
 import LanguageSelector from "./LanguageSelector";
 import { useLanguage } from "@/context/LanguageContext";
+import { Menu, X, Download } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,7 +18,8 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  const cvFile = language === "en" ? "/cv-pedro-fleita-en.pdf" : "/cv-pedro-fleita-es.pdf";
+  const cvFile =
+    language === "en" ? "/cv-pedro-fleita-en.pdf" : "/cv-pedro-fleita-es.pdf";
 
   const navLinks = [
     { href: "#sobre-mi", label: t("nav.about") },
@@ -28,144 +31,64 @@ export default function Navbar() {
 
   return (
     <header
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        zIndex: 100,
-        transition: "all 0.3s",
-        background: scrolled
-          ? "rgba(10,10,15,0.92)"
-          : "transparent",
-        backdropFilter: scrolled ? "blur(20px)" : "none",
-        borderBottom: scrolled ? "1px solid var(--border)" : "none",
-      }}
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        scrolled
+          ? "bg-[rgba(10,10,15,0.92)] backdrop-blur-xl border-b border-border"
+          : "bg-transparent"
+      )}
     >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 1.5rem",
-          height: "64px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        {/* Logo */}
+      <div className="container h-16 flex items-center justify-between">
         <Link
           href="#"
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 800,
-            fontSize: "1.15rem",
-            color: "var(--text)",
-            textDecoration: "none",
-            letterSpacing: "-0.02em",
-          }}
+          className="font-display font-extrabold text-lg text-text no-underline tracking-[-0.02em]"
         >
-          pf
-          <span style={{ color: "var(--accent)" }}>.</span>
-          dev
+          pf<span className="text-accent">.</span>dev
         </Link>
 
-        {/* Desktop nav */}
-        <nav
-          style={{
-            display: "flex",
-            gap: "2rem",
-            alignItems: "center",
-          }}
-          className="hidden-mobile"
-        >
+        <nav className="hidden md:flex gap-8 items-center">
           {navLinks.map((l) => (
             <NavLink key={l.href} href={l.href}>
               {l.label}
             </NavLink>
           ))}
           <LanguageSelector />
-          <a
-            href={cvFile}
-            download
-            className="btn-primary"
-            style={{ padding: "0.55rem 1.25rem", fontSize: "0.82rem" }}
-          >
-            ↓ {t("nav.cv")}
+          <a href={cvFile} download className="btn-primary py-2 px-5 text-sm">
+            <Download className="w-4 h-4" />
+            {t("nav.cv")}
           </a>
         </nav>
 
-        {/* Hamburger */}
         <button
           onClick={() => setOpen(!open)}
-          style={{
-            display: "none",
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            padding: "0.5rem",
-            color: "var(--text)",
-          }}
-          className="show-mobile"
+          className="md:hidden bg-transparent border-none cursor-pointer p-2 text-text"
           aria-label="Menu"
           aria-expanded={open}
           aria-controls="mobile-menu"
         >
-          {open ? (
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          ) : (
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          )}
+          {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div
           id="mobile-menu"
-          style={{
-            background: "var(--bg-2)",
-            borderTop: "1px solid var(--border)",
-            padding: "1.5rem",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.25rem",
-          }}
+          className="md:hidden bg-bg-2 border-t border-border px-6 py-6"
         >
-          {navLinks.map((l) => (
-            <NavLink key={l.href} href={l.href} onClick={() => setOpen(false)}>
-              {l.label}
-            </NavLink>
-          ))}
-          <LanguageSelector />
-          <a
-            href={cvFile}
-            download
-            className="btn-primary"
-            style={{ width: "fit-content" }}
-          >
-            ↓ {t("nav.downloadCV")}
-          </a>
+          <div className="container flex flex-col gap-5">
+            {navLinks.map((l) => (
+              <NavLink key={l.href} href={l.href} onClick={() => setOpen(false)}>
+                {l.label}
+              </NavLink>
+            ))}
+            <LanguageSelector />
+            <a href={cvFile} download className="btn-primary w-fit">
+              <Download className="w-4 h-4" />
+              {t("nav.downloadCV")}
+            </a>
+          </div>
         </div>
       )}
-
-      <style>{`
-        @media (min-width: 768px) {
-          .hidden-mobile { display: flex !important; }
-          .show-mobile   { display: none !important; }
-        }
-        @media (max-width: 767px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile   { display: block !important; }
-        }
-      `}</style>
     </header>
   );
 }

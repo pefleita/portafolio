@@ -5,37 +5,17 @@ const skillGroupsData = [
   {
     labelKey: "skills.cms",
     color: "#6c63ff",
-    skills: [
-      { name: "WordPress", icon: "WP" },
-      { name: "WooCommerce", icon: "WC" },
-      { name: "PHP", icon: "PHP" },
-      { name: "Yii2", icon: "Y2" },
-      { name: "MySQL", icon: "SQL" },
-    ],
+    skills: ["WordPress", "WooCommerce", "PHP", "Yii2", "MySQL"],
   },
   {
     labelKey: "skills.frontend",
     color: "#ff6b6b",
-    skills: [
-      { name: "HTML5", icon: "H5" },
-      { name: "CSS3", icon: "CS" },
-      { name: "JavaScript", icon: "JS" },
-      { name: "React", icon: "Re" },
-      { name: "Next.js", icon: "Nx" },
-      { name: "Tailwind CSS", icon: "TW" },
-    ],
+    skills: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS"],
   },
   {
     labelKey: "skills.tools",
     color: "#43e97b",
-    skills: [
-      { name: "Git", icon: "GT" },
-      { name: "GitHub", icon: "GH" },
-      { name: "SEO Técnico", icon: "SE" },
-      { name: "cPanel", icon: "CP" },
-      { name: "Figma", icon: "FG" },
-      { name: "VS Code", icon: "VS" },
-    ],
+    skills: ["Git", "GitHub", "SEO Técnico", "cPanel", "Figma", "VS Code"],
   },
 ];
 
@@ -50,129 +30,54 @@ export default function Skills() {
   const { t } = useLanguage();
   const doubled = [...allSkills, ...allSkills];
 
-  const skillGroups = skillGroupsData.map(group => ({
+  const skillGroups = skillGroupsData.map((group) => ({
     ...group,
     label: t(group.labelKey),
   }));
 
   return (
-    <section
-      id="habilidades"
-      style={{
-        padding: "7rem 0",
-        background: "var(--bg-2)",
-        overflow: "hidden",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 1.5rem",
-          marginBottom: "3.5rem",
-        }}
-      >
-        <div className="section-label" style={{ marginBottom: "1rem" }}>
-          {"// " + t("skills.title").toLowerCase()}
-        </div>
-        <h2
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 800,
-            fontSize: "clamp(2rem, 4vw, 3rem)",
-            letterSpacing: "-0.03em",
-            lineHeight: 1.1,
-            marginBottom: "1rem",
-          }}
-        >
+    <section id="habilidades" className="py-28 px-6 bg-bg-2">
+      <div className="container">
+        <div className="section-label mb-4">{"// " + t("skills.title").toLowerCase()}</div>
+        <h2 className="font-display font-extrabold text-4xl md:text-5xl tracking-[-0.03em] leading-tight mb-4">
           {t("skills.title")}
         </h2>
-        <p
-          style={{
-            color: "var(--text-muted)",
-            maxWidth: "500px",
-            lineHeight: 1.7,
-          }}
-        >
+        <p className="text-text-muted max-w-[500px] leading-relaxed mb-14">
           {t("skills.subtitle")}
         </p>
-      </div>
 
-      {/* Skill groups */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-          gap: "2rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-          padding: "0 1.5rem",
-          marginBottom: "4rem",
-        }}
-      >
-        {skillGroups.map((group) => (
-          <div key={group.labelKey}>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "0.75rem",
-                marginBottom: "1.25rem",
-              }}
-            >
-              <div
-                style={{
-                  width: "12px",
-                  height: "12px",
-                  borderRadius: "50%",
-                  background: group.color,
-                }}
-              />
-              <span
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 700,
-                  fontSize: "1.1rem",
-                  letterSpacing: "-0.01em",
-                }}
-              >
-                {group.label}
-              </span>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.5rem",
-              }}
-            >
-              {group.skills.map((skill) => (
-                <span
-                  key={skill.name}
-                  className="skill-tag"
-                  style={{
-                    borderColor: `${group.color}40`,
-                  }}
-                >
-                  {skill.name}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {skillGroups.map((group) => (
+            <div key={group.labelKey}>
+              <div className="flex items-center gap-3 mb-5">
+                <div
+                  className="w-3 h-3 rounded-full shrink-0"
+                  style={{ backgroundColor: group.color }}
+                />
+                <span className="font-display font-bold text-lg tracking-[-0.01em]">
+                  {group.label}
                 </span>
-              ))}
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="skill-tag"
+                    style={{ borderColor: `${group.color}40` }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Marquee */}
       <div className="marquee-wrapper">
         <div className="marquee-track">
           {doubled.map((skill, i) => (
-            <span
-              key={i}
-              className="skill-tag"
-              style={{
-                fontSize: ".75rem",
-              }}
-            >
+            <span key={i} className="skill-tag mr-2">
               {skill}
             </span>
           ))}
