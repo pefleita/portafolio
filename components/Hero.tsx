@@ -110,9 +110,9 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-        <div className="w-px h-12 bg-gradient-to-b from-text-muted to-transparent animate-fade-in" />
-        <span className="font-mono text-xs tracking-[0.15em] text-text-muted">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center animate-scroll-indicator">
+        <div className="w-px animate-scroll-line bg-gradient-to-b from-text-muted to-transparent" />
+        <span className="font-mono text-xs tracking-[0.15em] text-text-muted mt-2">
           {t("hero.scroll")}
         </span>
       </div>

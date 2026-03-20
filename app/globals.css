@@ -106,9 +106,21 @@ body::before {
   50%       { opacity: 0; }
 }
 
+@keyframes scrollIndicator {
+  0%, 100% { opacity: 0.3; transform: translateY(0); }
+  50%       { opacity: 0.7; transform: translateY(8px); }
+}
+
+@keyframes scrollLine {
+  0%, 100% { opacity: 0.2; height: 48px; }
+  50%       { opacity: 0.6; height: 60px; }
+}
+
 .animate-fade-up   { animation: fadeUp 0.7s ease both; }
 .animate-fade-in   { animation: fadeIn 0.7s ease both; }
 .animate-slide-left { animation: slideLeft 0.7s ease both; }
+.animate-scroll-indicator { animation: scrollIndicator 2s ease-in-out infinite; }
+.animate-scroll-line { animation: scrollLine 2s ease-in-out infinite; }
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
