@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="container relative z-10">
         <div className="inline-flex items-center gap-2 bg-surface border border-border rounded-full px-4 py-2 mb-8 animate-fade-up">
           <span className="w-2 h-2 rounded-full bg-accent-3 inline-block animate-[pulse-glow_2s_infinite]" />
-          <span className="font-mono text-xs text-text-muted tracking-wider">
+          <span className="font-mono text-xs color-white tracking-wider">
             {t("hero.available")}
           </span>
         </div>

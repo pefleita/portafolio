@@ -45,7 +45,7 @@ export default function About() {
               <div className="font-display font-extrabold text-4xl text-accent leading-none">
                 10+
               </div>
-              <div className="font-mono text-xs text-text-muted tracking-widest mt-1">
+              <div className="font-mono text-xs color-text tracking-widest mt-1">
                 {t("hero.years").toUpperCase()}
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function About() {
               <div className="font-display font-extrabold text-4xl text-accent-2 leading-none">
                 34+
               </div>
-              <div className="font-mono text-xs text-text-muted tracking-widest mt-1">
+              <div className="font-mono text-xs color-text tracking-widest mt-1">
                 {t("hero.projects").toUpperCase()}
               </div>
             </div>

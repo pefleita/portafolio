@@ -69,6 +69,7 @@ function ProjectCard({ project, active, onToggle, t, getProjectTranslation }: {
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
+          title={getProjectTranslation(project.id, "title")}
           className="absolute top-4 right-4 bg-black/50 backdrop-blur-md border border-border rounded-lg p-2 text-white transition-colors hover:text-accent"
         >
           <ExternalLink className="w-4 h-4" />
